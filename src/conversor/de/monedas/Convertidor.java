@@ -30,37 +30,66 @@ public class Convertidor extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        cbmonedaentrada = new rojerusan.RSComboBox();
+        txtmoedaentrada = new RSMaterialComponent.RSTextFieldMaterialIcon();
+        cbmonedasalida = new rojerusan.RSComboBox();
+        txtmonedasalida = new RSMaterialComponent.RSTextFieldMaterialIcon();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(255, 204, 51));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 39, Short.MAX_VALUE)
-        );
+        jLabel1.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("CONVERTIDOR DE MONEDAS");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 310, 30));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 261, Short.MAX_VALUE))
-        );
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 50));
+
+        cbmonedaentrada.setBackground(new java.awt.Color(255, 204, 51));
+        cbmonedaentrada.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "ELIJA MONEDA ", "Sol Peruano PEN", "Dolar USD", "Euro EUR", "Libra Esterlina GBP", "Yen Japones  JPY", "Won Sul-Coreano KRW" }));
+        cbmonedaentrada.setColorArrow(new java.awt.Color(255, 204, 51));
+        cbmonedaentrada.setColorBorde(new java.awt.Color(255, 255, 0));
+        cbmonedaentrada.setColorFondo(new java.awt.Color(255, 204, 51));
+        cbmonedaentrada.setColorSeleccion(new java.awt.Color(255, 204, 51));
+        jPanel1.add(cbmonedaentrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, 40));
+
+        txtmoedaentrada.setForeground(new java.awt.Color(255, 204, 51));
+        txtmoedaentrada.setColorIcon(new java.awt.Color(255, 204, 51));
+        txtmoedaentrada.setColorMaterial(new java.awt.Color(255, 204, 51));
+        txtmoedaentrada.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.MONETIZATION_ON);
+        txtmoedaentrada.setPhColor(new java.awt.Color(0, 0, 0));
+        txtmoedaentrada.setPlaceholder("Escribir aqui");
+        txtmoedaentrada.setSelectionColor(new java.awt.Color(255, 204, 51));
+        txtmoedaentrada.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtmoedaentradaKeyReleased(evt);
+            }
+        });
+        jPanel1.add(txtmoedaentrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 100, 150, -1));
+
+        cbmonedasalida.setBackground(new java.awt.Color(255, 204, 51));
+        cbmonedasalida.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "ELIJA MONEDA", "Sol Peruano PEN", "Dolar USD", "Euro EUR", "Libra Esterlina GBP", "Yen Japones  JPY", "Won Sul-Coreano KRW" }));
+        cbmonedasalida.setColorArrow(new java.awt.Color(255, 204, 51));
+        cbmonedasalida.setColorBorde(new java.awt.Color(255, 255, 0));
+        cbmonedasalida.setColorFondo(new java.awt.Color(255, 204, 51));
+        cbmonedasalida.setColorSeleccion(new java.awt.Color(255, 204, 51));
+        jPanel1.add(cbmonedasalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, 40));
+
+        txtmonedasalida.setForeground(new java.awt.Color(255, 204, 51));
+        txtmonedasalida.setColorIcon(new java.awt.Color(255, 204, 51));
+        txtmonedasalida.setColorMaterial(new java.awt.Color(255, 204, 51));
+        txtmonedasalida.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.MONETIZATION_ON);
+        txtmonedasalida.setPhColor(new java.awt.Color(0, 0, 0));
+        txtmonedasalida.setPlaceholder("Escribir aqui");
+        txtmonedasalida.setSelectionColor(new java.awt.Color(255, 204, 51));
+        jPanel1.add(txtmonedasalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 210, 150, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -70,11 +99,15 @@ public class Convertidor extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtmoedaentradaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtmoedaentradaKeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtmoedaentradaKeyReleased
 
     /**
      * @param args the command line arguments
@@ -112,7 +145,12 @@ public class Convertidor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private rojerusan.RSComboBox cbmonedaentrada;
+    private rojerusan.RSComboBox cbmonedasalida;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private RSMaterialComponent.RSTextFieldMaterialIcon txtmoedaentrada;
+    private RSMaterialComponent.RSTextFieldMaterialIcon txtmonedasalida;
     // End of variables declaration//GEN-END:variables
 }
