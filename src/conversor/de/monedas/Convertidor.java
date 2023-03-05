@@ -11,12 +11,23 @@ import java.text.DecimalFormat;
  * @author santiago
  */
 public class Convertidor extends javax.swing.JFrame {
-
+    
+    
     /**
      * Creates new form Convertidor
      */
+ 
+
+    
+
+    
+    
     public Convertidor() {
         initComponents();
+        
+        
+        
+        
         
        
     }
@@ -55,7 +66,7 @@ public class Convertidor extends javax.swing.JFrame {
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 50));
 
         cbmonedaentrada.setBackground(new java.awt.Color(255, 204, 51));
-        cbmonedaentrada.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "ELIJA MONEDA ", "Sol Peruano PEN", "Dolar USD", "Euro EUR", "Libra Esterlina GBP", "Yen Japones  JPY", "Won Sul-Coreano KRW" }));
+        cbmonedaentrada.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "ELIJA MONEDA", "Sol Peruano PEN", "Dolar USD", "Euro EUR", "Libra Esterlina GBP", "Yen Japones  JPY", "Won Sul-Coreano KRW" }));
         cbmonedaentrada.setColorArrow(new java.awt.Color(255, 204, 51));
         cbmonedaentrada.setColorBorde(new java.awt.Color(255, 255, 0));
         cbmonedaentrada.setColorFondo(new java.awt.Color(255, 204, 51));
@@ -125,22 +136,14 @@ public class Convertidor extends javax.swing.JFrame {
          if(this.txtmonedaentrada.getText().equals("")||this.txtmonedasalida.getText().equals("")){
          
          }else{
-        
-        
         double me= Double.parseDouble(this.txtmonedaentrada.getText());
-      //  double ms=Double.parseDouble(this.txtmonedasalida.getText());
-        
-       
-       
-        
-       
-                
+      
         if(this.cbmonedaentrada.getSelectedIndex()==1){
             if(this.cbmonedasalida.getSelectedIndex()==2){
                 //DecimalFormat df = new DecimalFormat("#.0000");
-                 double sd= me*0.26404034536477173712143215483326;
-                 double sdr= Math.round(sd*10000.0)/10000.0;
-                this.txtmonedasalida.setText(String.valueOf(sdr));
+                 double sd= Math.round((me*0.26404034536477173712143215483326)*1000.0/1000.0);
+                 //double sdr= Math.round(sd*10000.0)/10000.0;
+                this.txtmonedasalida.setText(String.valueOf(sd));
                 
                //  double ds= ms*3.7873;
                // this.txtmoedaentrada.setText(String.valueOf(ds));
@@ -227,12 +230,12 @@ public class Convertidor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private rojerusan.RSComboBox cbmonedaentrada;
-    private rojerusan.RSComboBox cbmonedasalida;
+    public static rojerusan.RSComboBox cbmonedaentrada;
+    public static rojerusan.RSComboBox cbmonedasalida;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private RSMaterialComponent.RSTextFieldMaterialIcon txtmonedaentrada;
-    private RSMaterialComponent.RSTextFieldMaterialIcon txtmonedasalida;
+    public static RSMaterialComponent.RSTextFieldMaterialIcon txtmonedaentrada;
+    public static RSMaterialComponent.RSTextFieldMaterialIcon txtmonedasalida;
     // End of variables declaration//GEN-END:variables
 }
