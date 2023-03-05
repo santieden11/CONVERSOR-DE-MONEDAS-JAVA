@@ -16,17 +16,16 @@ public class Convertidor extends javax.swing.JFrame {
     /**
      * Creates new form Convertidor
      */
- 
+  
+        
+       
 
     
-
     
     
     public Convertidor() {
         initComponents();
-        
-        
-        
+       
         
         
        
@@ -131,28 +130,15 @@ public class Convertidor extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtmonedaentradaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtmonedaentradaKeyReleased
-     
-        
-         if(this.txtmonedaentrada.getText().equals("")||this.txtmonedasalida.getText().equals("")){
          
+conversorsuperior cs= new conversorsuperior();
+        if(txtmonedaentrada.getText().equals("")||txtmonedasalida.getText().equals("")){
+         txtmonedaentrada.setText("0");
+         txtmonedasalida.setText("0");
          }else{
-        double me= Double.parseDouble(this.txtmonedaentrada.getText());
-      
-        if(this.cbmonedaentrada.getSelectedIndex()==1){
-            if(this.cbmonedasalida.getSelectedIndex()==2){
-                //DecimalFormat df = new DecimalFormat("#.0000");
-                 double sd= Math.round((me*0.26404034536477173712143215483326)*1000.0/1000.0);
-                 //double sdr= Math.round(sd*10000.0)/10000.0;
-                this.txtmonedasalida.setText(String.valueOf(sd));
-                
-               //  double ds= ms*3.7873;
-               // this.txtmoedaentrada.setText(String.valueOf(ds));
-            }
-           
-            }
-            
-            
-        }
+        cs.conversorPENaTODOS();
+        
+                 }
     }//GEN-LAST:event_txtmonedaentradaKeyReleased
 
     private void txtmonedaentradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtmonedaentradaActionPerformed
@@ -162,14 +148,14 @@ public class Convertidor extends javax.swing.JFrame {
     private void txtmonedasalidaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtmonedasalidaKeyReleased
         // TODO add your handling code here:
         
-            if(this.txtmonedaentrada.getText().equals("")||this.txtmonedasalida.getText().equals("")){
-         this.txtmonedaentrada.setText("0");
-         this.txtmonedasalida.setText("0");
+            if(txtmonedaentrada.getText().equals("")||txtmonedasalida.getText().equals("")){
+         txtmonedaentrada.setText("0");
+         txtmonedasalida.setText("0");
          }else{
         
         
        // double me= Double.parseDouble(this.txtmoedaentrada.getText());
-        double ms=Double.parseDouble(this.txtmonedasalida.getText());
+        double ms=Double.parseDouble(txtmonedasalida.getText());
         
        
        
