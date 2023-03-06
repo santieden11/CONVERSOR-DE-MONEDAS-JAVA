@@ -110,5 +110,128 @@ public class conversorsuperior {
         }
 
     }
+    public void conversorEURaTODOS() {
+
+        txtconvertido = Double.parseDouble(txtentrada.getText());
+
+        if (cbentrada.getSelectedIndex() == 3) {
+
+            //de euro a sol peruano
+            if (cbsalida.getSelectedIndex() == 1) {
+                MONEDA = Math.round((txtconvertido * 4.0216279936194458904431319280585));
+                txtsalida.setText(String.valueOf(MONEDA));
+            }
+            //euro a dolar
+            if (cbentrada.getSelectedIndex() == 2) {
+                MONEDA = Math.round((txtconvertido * 1.0624549479260018827976623186265e-8) * 10000.0) / 10000.0;
+                txtsalida.setText(String.valueOf(MONEDA));
+            }
+                  //euro a auro
+            if (cbentrada.getSelectedIndex() == 3) {
+                MONEDA = Math.round((txtconvertido * 1) * 10000.0) / 10000.0;
+                txtsalida.setText(String.valueOf(MONEDA));
+            }
+            //euro a libras esterlinas
+            if (cbentrada.getSelectedIndex() == 4) {
+                MONEDA = Math.round((txtconvertido * 0.88300860103357922768182515758613) * 10000.0) / 10000.0;
+                txtsalida.setText(String.valueOf(MONEDA));
+            }
+            //euro a yean japones
+            if (cbentrada.getSelectedIndex() == 5) {
+                MONEDA = Math.round((txtconvertido * 144.4228057359308140816048354604) * 10000.0) / 10000.0;
+                txtsalida.setText(String.valueOf(MONEDA));
+            }
+            
+           // euro a won sur-coreano
+            if (cbentrada.getSelectedIndex() == 6) {
+                MONEDA = Math.round((txtconvertido * 1376.8549092601671165907243983399 ) * 10000.0) / 10000.0;
+                txtsalida.setText(String.valueOf(MONEDA));
+            }
+
+        }
+
+    }
+    public void conversorGBPaTODOS() {
+
+        txtconvertido = Double.parseDouble(txtentrada.getText());
+
+        if (cbentrada.getSelectedIndex() == 4) {
+
+            //de libras esterlinas a sol peruano
+            if (cbsalida.getSelectedIndex() == 1) {
+                MONEDA = Math.round((txtconvertido * 4.5538715490362937642425178865828));
+                txtsalida.setText(String.valueOf(MONEDA));
+            }
+            //libras esterlinas a dolar
+            if (cbentrada.getSelectedIndex() == 2) {
+                MONEDA = Math.round((txtconvertido * 1.2032662373228231075777652619372) * 10000.0) / 10000.0;
+                txtsalida.setText(String.valueOf(MONEDA));
+            }
+                  //libras esterlinas a auro
+            if (cbentrada.getSelectedIndex() == 3) {
+                MONEDA = Math.round((txtconvertido *1.1325405013754534508129675842106) * 10000.0) / 10000.0;
+                txtsalida.setText(String.valueOf(MONEDA));
+            }
+            //libras esterlinas a libras esterlinas
+            if (cbentrada.getSelectedIndex() == 4) {
+                MONEDA = Math.round((txtconvertido * 1) * 10000.0) / 10000.0;
+                txtsalida.setText(String.valueOf(MONEDA));
+            }
+            //libras esterlinas a yean japones
+            if (cbentrada.getSelectedIndex() == 5) {
+                MONEDA = Math.round((txtconvertido * 163.59870024104632493515765515946) * 10000.0) / 10000.0;
+                txtsalida.setText(String.valueOf(MONEDA));
+            }
+            
+           // libras esterlinas a won sur-coreano
+            if (cbentrada.getSelectedIndex() == 6) {
+                MONEDA = Math.round((txtconvertido * 1559.3374686963003159217711578704 ) * 10000.0) / 10000.0;
+                txtsalida.setText(String.valueOf(MONEDA));
+            }
+
+        }
+
+    }
+    public void conversorJPYaTODOS() {
+
+        txtconvertido = Double.parseDouble(txtentrada.getText());
+
+        if (cbentrada.getSelectedIndex() == 4) {
+
+            //de yen japones a sol peruano
+            if (cbsalida.getSelectedIndex() == 1) {
+                MONEDA = Math.round((txtconvertido * 0.02790230265426792505307576010895));
+                txtsalida.setText(String.valueOf(MONEDA));
+            }
+            //lyen japones a dolar
+            if (cbentrada.getSelectedIndex() == 2) {
+                MONEDA = Math.round((txtconvertido * 0.00736174387344632235986883728176) * 10000.0) / 10000.0;
+                txtsalida.setText(String.valueOf(MONEDA));
+            }
+                  //yen japones a auro
+            if (cbentrada.getSelectedIndex() == 3) {
+                MONEDA = Math.round((txtconvertido *0.0069241753636040277374156055541) * 10000.0) / 10000.0;
+                txtsalida.setText(String.valueOf(MONEDA));
+            }
+            //yen japones a libras esterlinas
+            if (cbentrada.getSelectedIndex() == 4) {
+                MONEDA = Math.round((txtconvertido * 0.00611978774617764177161490672587) * 10000.0) / 10000.0;
+                txtsalida.setText(String.valueOf(MONEDA));
+            }
+            //yen japones a yean japones
+            if (cbentrada.getSelectedIndex() == 5) {
+                MONEDA = Math.round((txtconvertido * 1) * 10000.0) / 10000.0;
+                txtsalida.setText(String.valueOf(MONEDA));
+            }
+            
+           // yen japones a won sur-coreano
+            if (cbentrada.getSelectedIndex() == 6) {
+                MONEDA = Math.round((txtconvertido * 9.5606782306894138147402521475912 ) * 10000.0) / 10000.0;
+                txtsalida.setText(String.valueOf(MONEDA));
+            }
+
+        }
+
+    }
 
 }
