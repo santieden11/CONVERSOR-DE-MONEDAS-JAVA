@@ -4,7 +4,10 @@
  */
 package conversor.de.monedas;
 
+import RSMaterialComponent.RSTextFieldMaterialIcon;
+//import static conversor.de.monedas.Convertidor.getCbmonedaentrada;
 import java.text.DecimalFormat;
+import rojerusan.RSComboBox;
 
 /**
  *
@@ -14,23 +17,26 @@ public class Convertidor extends javax.swing.JFrame {
     
     
     /**
-     * Creates new form Convertidor
+     * Creates new form Convertidor 
      */
   
-        
        
 
+ 
+       
+      
     
     
     
     public Convertidor() {
         initComponents();
        
-        
+
+       
         
        
     }
-
+  
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -70,6 +76,11 @@ public class Convertidor extends javax.swing.JFrame {
         cbmonedaentrada.setColorBorde(new java.awt.Color(255, 255, 0));
         cbmonedaentrada.setColorFondo(new java.awt.Color(255, 204, 51));
         cbmonedaentrada.setColorSeleccion(new java.awt.Color(255, 204, 51));
+        cbmonedaentrada.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                cbmonedaentradaMousePressed(evt);
+            }
+        });
         jPanel1.add(cbmonedaentrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, 40));
 
         txtmonedaentrada.setForeground(new java.awt.Color(255, 204, 51));
@@ -102,6 +113,7 @@ public class Convertidor extends javax.swing.JFrame {
 
         txtmonedasalida.setForeground(new java.awt.Color(255, 204, 51));
         txtmonedasalida.setText("0");
+        txtmonedasalida.setToolTipText("");
         txtmonedasalida.setColorIcon(new java.awt.Color(255, 204, 51));
         txtmonedasalida.setColorMaterial(new java.awt.Color(255, 204, 51));
         txtmonedasalida.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.MONETIZATION_ON);
@@ -131,12 +143,41 @@ public class Convertidor extends javax.swing.JFrame {
 
     private void txtmonedaentradaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtmonedaentradaKeyReleased
          
-conversorsuperior cs= new conversorsuperior();
+        conversorsuperior cs= new conversorsuperior();
+
         if(txtmonedaentrada.getText().equals("")||txtmonedasalida.getText().equals("")){
          txtmonedaentrada.setText("0");
          txtmonedasalida.setText("0");
          }else{
-        cs.conversorPENaTODOS();
+            System.out.println("obteniendo combo1"+getCbmonedaentrada());
+            if (getCbmonedaentrada()== 1) {
+                System.out.println(getCbmonedaentrada());
+                System.out.println(this.getTxtmonedaentrada());
+                 this.txtmonedasalida.setText(cs.conversorPENaTODOS(this.getTxtmonedaentrada(),this.getCbmonedasalida()));
+                System.out.println("convesor"+this.getTxtmonedasalida());
+            }
+            if (cbmonedaentrada.getSelectedIndex() == 2) {
+        // cs.conversorUSDaTODOS();
+            }
+            if (this.cbmonedaentrada.getSelectedIndex() == 3) {
+         // cs.conversorEURaTODOS();
+            }
+            if (this.cbmonedaentrada.getSelectedIndex() == 4) {
+       // cs.conversorGBPaTODOS();
+            }
+            if (this.cbmonedaentrada.getSelectedIndex() == 5) {
+         //cs.conversorJPYaTODOS();
+            }
+            if (this.cbmonedaentrada.getSelectedIndex() == 6) {
+        //cs.conversorKRWaTODOS();
+            }
+            
+            
+      
+      
+        
+       
+        
         
                  }
     }//GEN-LAST:event_txtmonedaentradaKeyReleased
@@ -180,6 +221,10 @@ conversorsuperior cs= new conversorsuperior();
             
     }//GEN-LAST:event_txtmonedasalidaKeyReleased
 
+    private void cbmonedaentradaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cbmonedaentradaMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbmonedaentradaMousePressed
+
     /**
      * @param args the command line arguments
      */
@@ -214,14 +259,48 @@ conversorsuperior cs= new conversorsuperior();
             }
         });
     }
+    
+    public String getTxtmonedaentrada() {
+        return txtmonedaentrada.getText();
+    }
+
+    public void setTxtmonedaentrada(String txtmonedaentrada) {
+        this.txtmonedaentrada.setText(txtmonedaentrada);
+    }
+
+    public String getTxtmonedasalida() {
+        return txtmonedasalida.getText();
+    }
+
+    public void setTxtmonedasalida(String txtmonedasalida) {
+        this.txtmonedasalida.setText(txtmonedasalida);
+    }
+
+    public  int getCbmonedaentrada() {
+        return cbmonedaentrada.getSelectedIndex();
+    }
+
+    public  int getCbmonedasalida() {
+        return cbmonedasalida.getSelectedIndex();
+    }
+    
+    
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public static rojerusan.RSComboBox cbmonedaentrada;
-    public static rojerusan.RSComboBox cbmonedasalida;
+    private rojerusan.RSComboBox cbmonedaentrada;
+    private rojerusan.RSComboBox cbmonedasalida;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    public static RSMaterialComponent.RSTextFieldMaterialIcon txtmonedaentrada;
-    public static RSMaterialComponent.RSTextFieldMaterialIcon txtmonedasalida;
+    private RSMaterialComponent.RSTextFieldMaterialIcon txtmonedaentrada;
+    private RSMaterialComponent.RSTextFieldMaterialIcon txtmonedasalida;
     // End of variables declaration//GEN-END:variables
+
+
+
+
+
+
 }
