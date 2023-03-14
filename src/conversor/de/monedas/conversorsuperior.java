@@ -5,6 +5,8 @@
 package conversor.de.monedas;
 
 import RSMaterialComponent.RSTextFieldMaterialIcon;
+import java.text.DecimalFormat;
+import java.util.Locale;
 import rojerusan.RSComboBox;
 
 /**
@@ -13,19 +15,11 @@ import rojerusan.RSComboBox;
  */
 public class conversorsuperior {
 
-    // Convertidor c = new Convertidor();
-    //private  RSTextFieldMaterialIcon txtentrada = Convertidor.txtmonedaentrada;
-    // private final RSTextFieldMaterialIcon txtsalida = Convertidor.txtmonedasalida;
+ 
     private double txtconvertido;
-    //private final RSComboBox cbentrada = Convertidor.cbmonedaentrada;
-    // private final RSComboBox cbsalida = Convertidor.cbmonedasalida;
-    //private double cbsalida;
+ 
     private String MONEDA;
-    private double USD;
-    private double EUR;
-    private double PENaGBP;
-    private double PENaJPY;
-    private double PENaKRW;
+   
 
     Convertidor c = new Convertidor();
 
@@ -33,6 +27,10 @@ public class conversorsuperior {
         //convesorPENaTODOS();
 
     }
+    public static String convertir(double val){
+    Locale.setDefault(Locale.US);
+    DecimalFormat num = new DecimalFormat("#,##0.0000");
+    return num.format(val);}
 
     public String conversorPENaTODOS(String entrada, int cbsalida) {
 
@@ -60,14 +58,14 @@ public class conversorsuperior {
         //sol peruano a yean japoneses
         if (cbsalida == 5) {
             MONEDA = String.valueOf(Math.round((txtconvertido * 35.842293906810035842293906810036) * 10000.0) / 10000.0);
-            c.setTxtmonedasalida(String.valueOf(MONEDA));
-            System.out.println("moneda es:5 " + MONEDA);
+          //  c.setTxtmonedasalida(String.valueOf(MONEDA));
+          //  System.out.println("moneda es:5 " + MONEDA);
         }
         //sol peruano a won coreanos
         if (cbsalida == 6) {
             MONEDA = String.valueOf(Math.round((txtconvertido * 342.50317072310296912573668150733) * 10000.0) / 10000.0);
-            c.setTxtmonedasalida(String.valueOf(MONEDA));
-            System.out.println("moneda es:6 " + MONEDA);
+        //    c.setTxtmonedasalida(String.valueOf(MONEDA));
+          //  System.out.println("moneda es:6 " + MONEDA);
         }
 
         return MONEDA;
@@ -82,7 +80,7 @@ public class conversorsuperior {
 
             //de dolar a sol peruano
             if (cbsalida== 1) {
-                MONEDA = String.valueOf(Math.round((txtconvertido * 3.7873)));
+                MONEDA = String.valueOf(Math.round((txtconvertido * 3.7873)* 10000.0)/ 10000.0);
                
             }
             //dolar a dolar
@@ -92,7 +90,7 @@ public class conversorsuperior {
             }
                   //dolar a auro
             if (cbsalida== 3) {
-                MONEDA =  String.valueOf(Math.round((txtconvertido * 0.94043439040666640083721231171563) * 10000.0) / 10000.0);
+                MONEDA =  String.valueOf(Math.round((txtconvertido *  0.947927) * 10000.0) / 10000.0);
                
             }
             //dolar a libras esterlinas
@@ -128,7 +126,7 @@ public class conversorsuperior {
             }
             //euro a dolar
             if (cbsalida == 2) {
-                MONEDA = String.valueOf(Math.round((txtconvertido * 1.0624549479260018827976623186265e-8) * 10000.0) / 10000.0);
+                MONEDA = String.valueOf(Math.round((txtconvertido * 1.0550815894593128886656805170744) * 10000.0) / 10000.0);
                
             }
                   //euro a auro
@@ -249,17 +247,17 @@ return MONEDA;
             }
             //won sur-coreano a dolar
             if (cbsalida == 2) {
-                MONEDA = String.valueOf(Math.round((txtconvertido * 0.00077198422) * 10000.0) / 10000.0);
+                MONEDA = String.valueOf(convertir(txtconvertido * 0.000766414));
                 
             }
                   //won sur-coreano a euro
             if (cbsalida == 3) {
-                MONEDA = String.valueOf(Math.round((txtconvertido *0.00072515404) * 10000.0) / 10000.0);
+                MONEDA = String.valueOf(convertir(txtconvertido * 0.00072515404));
                 
             }
             //won sur-coreano a libras esterlinas
             if (cbsalida == 4) {
-                MONEDA = String.valueOf(Math.round((txtconvertido * 0.00064127529) * 10000.0) / 10000.0);
+                MONEDA = String.valueOf(convertir(txtconvertido * 0.00064127529));
                 
             }
             //won sur-coreano a yean japones

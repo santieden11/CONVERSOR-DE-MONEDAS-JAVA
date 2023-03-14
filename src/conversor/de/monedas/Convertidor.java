@@ -5,8 +5,11 @@
 package conversor.de.monedas;
 
 import RSMaterialComponent.RSTextFieldMaterialIcon;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 //import static conversor.de.monedas.Convertidor.getCbmonedaentrada;
 import java.text.DecimalFormat;
+import javax.swing.JOptionPane;
 import rojerusan.RSComboBox;
 
 /**
@@ -14,29 +17,140 @@ import rojerusan.RSComboBox;
  * @author santiago
  */
 public class Convertidor extends javax.swing.JFrame {
-    
-    
-    /**
-     * Creates new form Convertidor 
-     */
-  
-       
 
- 
-       
-      
-    
-    
-    
+    /**
+     * Creates new form Convertidor
+     */
     public Convertidor() {
         initComponents();
-       
-
-       
+        this.setLocationRelativeTo(null);
         
        
+
     }
+     public boolean esDecimal(String cad)
+ {
+ try
+ {
+   Double.valueOf(cad);
+   return true;
+ }
+ catch(NumberFormatException nfe)
+ {
+   return false;
+ }
+ }
+     
   
+
+    private void cbprimero() {
+
+        conversorsuperior cs = new conversorsuperior();
+
+      if(esDecimal(txtmonedaentrada.getText())){
+        
+            if (txtmonedaentrada.getText().equals("") || txtmonedasalida.getText().equals("")) {
+            txtmonedaentrada.setText("0");
+            txtmonedasalida.setText("0");
+        } else {
+
+            if (getCbmonedaentrada() == 1) {
+
+                this.txtmonedasalida.setText(cs.conversorPENaTODOS(this.getTxtmonedaentrada(), this.getCbmonedasalida()));
+
+            }
+            if (getCbmonedaentrada()== 2) {
+                // cs.conversorUSDaTODOS();
+
+                this.txtmonedasalida.setText(cs.conversorUSDaTODOS(this.getTxtmonedaentrada(), this.getCbmonedasalida()));
+            }
+            if (getCbmonedaentrada() == 3) {
+                // cs.conversorEURaTODOS();
+                this.txtmonedasalida.setText(cs.conversorEURaTODOS(this.getTxtmonedaentrada(), this.getCbmonedasalida()));
+            }
+            if (getCbmonedaentrada() == 4) {
+                // cs.conversorGBPaTODOS();
+                this.txtmonedasalida.setText(cs.conversorGBPaTODOS(this.getTxtmonedaentrada(), this.getCbmonedasalida()));
+            }
+            if (getCbmonedaentrada() == 5) {
+                //cs.conversorJPYaTODOS();
+                this.txtmonedasalida.setText(cs.conversorJPYaTODOS(this.getTxtmonedaentrada(), this.getCbmonedasalida()));
+            }
+            if (getCbmonedaentrada() == 6) {
+                //cs.conversorKRWaTODOS();
+                this.txtmonedasalida.setText(cs.conversorKRWaTODOS(this.getTxtmonedaentrada(), this.getCbmonedasalida()));
+            }
+
+        }
+          
+          
+               
+           
+          
+      }else{
+
+ JOptionPane.showMessageDialog(rootPane, "!el valor ingresado no es valido");
+      
+      }
+
+    }
+    private void cbsegundo() {
+
+        conversorsuperior cs = new conversorsuperior();
+
+       if(esDecimal(txtmonedasalida.getText())){
+       
+            if (txtmonedaentrada.getText().equals("") || txtmonedasalida.getText().equals("")) {
+            txtmonedaentrada.setText("0");
+            txtmonedasalida.setText("0");
+        } else {
+
+            if (getCbmonedasalida() == 1) {
+
+                this.txtmonedaentrada.setText(cs.conversorPENaTODOS(this.getTxtmonedasalida(), this.getCbmonedaentrada()));
+
+            }
+            if (getCbmonedasalida()== 2) {
+                // cs.conversorUSDaTODOS();
+
+                this.txtmonedaentrada.setText(cs.conversorUSDaTODOS(this.getTxtmonedasalida(), this.getCbmonedaentrada()));
+            }
+            if (getCbmonedasalida() == 3) {
+                // cs.conversorEURaTODOS();
+                this.txtmonedaentrada.setText(cs.conversorEURaTODOS(this.getTxtmonedasalida(), this.getCbmonedaentrada()));
+            }
+            if (getCbmonedasalida() == 4) {
+                // cs.conversorGBPaTODOS();
+                this.txtmonedaentrada.setText(cs.conversorGBPaTODOS(this.getTxtmonedasalida(), this.getCbmonedaentrada()));
+            }
+            if (getCbmonedasalida() == 5) {
+                //cs.conversorJPYaTODOS();
+                this.txtmonedaentrada.setText(cs.conversorJPYaTODOS(this.getTxtmonedasalida(), this.getCbmonedaentrada()));
+            }
+            if (getCbmonedasalida() == 6) {
+                //cs.conversorKRWaTODOS();
+                this.txtmonedaentrada.setText(cs.conversorKRWaTODOS(this.getTxtmonedasalida(), this.getCbmonedaentrada()));
+            }
+
+        }
+           
+           
+           
+           
+           
+           
+           
+         
+         
+          
+          
+      }else{
+
+        JOptionPane.showMessageDialog(rootPane, "!el valor ingresado no es valido");
+        
+       }
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -49,6 +163,7 @@ public class Convertidor extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        rSButtonIconUno1 = new RSMaterialComponent.RSButtonIconUno();
         cbmonedaentrada = new rojerusan.RSComboBox();
         txtmonedaentrada = new RSMaterialComponent.RSTextFieldMaterialIcon();
         cbmonedasalida = new rojerusan.RSComboBox();
@@ -66,7 +181,16 @@ public class Convertidor extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("CONVERTIDOR DE MONEDAS");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 310, 30));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 310, 30));
+
+        rSButtonIconUno1.setBackground(new java.awt.Color(255, 204, 51));
+        rSButtonIconUno1.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.CLOSE);
+        rSButtonIconUno1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rSButtonIconUno1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(rSButtonIconUno1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 50, 50));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 50));
 
@@ -77,6 +201,9 @@ public class Convertidor extends javax.swing.JFrame {
         cbmonedaentrada.setColorFondo(new java.awt.Color(255, 204, 51));
         cbmonedaentrada.setColorSeleccion(new java.awt.Color(255, 204, 51));
         cbmonedaentrada.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cbmonedaentradaMouseClicked(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 cbmonedaentradaMousePressed(evt);
             }
@@ -109,6 +236,11 @@ public class Convertidor extends javax.swing.JFrame {
         cbmonedasalida.setColorBorde(new java.awt.Color(255, 255, 0));
         cbmonedasalida.setColorFondo(new java.awt.Color(255, 204, 51));
         cbmonedasalida.setColorSeleccion(new java.awt.Color(255, 204, 51));
+        cbmonedasalida.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cbmonedasalidaMouseClicked(evt);
+            }
+        });
         jPanel1.add(cbmonedasalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, 40));
 
         txtmonedasalida.setForeground(new java.awt.Color(255, 204, 51));
@@ -142,44 +274,16 @@ public class Convertidor extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtmonedaentradaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtmonedaentradaKeyReleased
-         
-        conversorsuperior cs= new conversorsuperior();
 
-        if(txtmonedaentrada.getText().equals("")||txtmonedasalida.getText().equals("")){
-         txtmonedaentrada.setText("0");
-         txtmonedasalida.setText("0");
-         }else{
-            System.out.println("obteniendo combo1"+getCbmonedaentrada());
-            if (getCbmonedaentrada()== 1) {
-                System.out.println(getCbmonedaentrada());
-                System.out.println(this.getTxtmonedaentrada());
-                 this.txtmonedasalida.setText(cs.conversorPENaTODOS(this.getTxtmonedaentrada(),this.getCbmonedasalida()));
-                System.out.println("convesor"+this.getTxtmonedasalida());
-            }
-            if (cbmonedaentrada.getSelectedIndex() == 2) {
-        // cs.conversorUSDaTODOS();
-            }
-            if (this.cbmonedaentrada.getSelectedIndex() == 3) {
-         // cs.conversorEURaTODOS();
-            }
-            if (this.cbmonedaentrada.getSelectedIndex() == 4) {
-       // cs.conversorGBPaTODOS();
-            }
-            if (this.cbmonedaentrada.getSelectedIndex() == 5) {
-         //cs.conversorJPYaTODOS();
-            }
-            if (this.cbmonedaentrada.getSelectedIndex() == 6) {
-        //cs.conversorKRWaTODOS();
-            }
-            
-            
-      
-      
         
+         // this.cbmonedaentrada.addActionListener((ActionEvent e) -> {
+            cbprimero();
+            
+    
        
         
         
-                 }
+                
     }//GEN-LAST:event_txtmonedaentradaKeyReleased
 
     private void txtmonedaentradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtmonedaentradaActionPerformed
@@ -187,43 +291,41 @@ public class Convertidor extends javax.swing.JFrame {
     }//GEN-LAST:event_txtmonedaentradaActionPerformed
 
     private void txtmonedasalidaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtmonedasalidaKeyReleased
-        // TODO add your handling code here:
-        
-            if(txtmonedaentrada.getText().equals("")||txtmonedasalida.getText().equals("")){
-         txtmonedaentrada.setText("0");
-         txtmonedasalida.setText("0");
-         }else{
-        
-        
-       // double me= Double.parseDouble(this.txtmoedaentrada.getText());
-        double ms=Double.parseDouble(txtmonedasalida.getText());
-        
-       
-       
-        
-       
-                
-        if(this.cbmonedaentrada.getSelectedIndex()==1){
-            if(this.cbmonedasalida.getSelectedIndex()==2){
-                
-                // double sd= me*0.26404034536477173712143215483326;
-               // this.txtmonedasalida.setText(String.valueOf(sd));
-                
-                 double ds= ms*3.7873;
-                 double dsr= Math.round(ds*10000.0)/10000.0;
-                this.txtmonedaentrada.setText(String.valueOf(dsr));
-            }
-           
-            }
+      
+          
+             cbsegundo();
             
-            
-        }
-            
+ 
     }//GEN-LAST:event_txtmonedasalidaKeyReleased
 
     private void cbmonedaentradaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cbmonedaentradaMousePressed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbmonedaentradaMousePressed
+
+    private void cbmonedasalidaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cbmonedasalidaMouseClicked
+        // TODO add your handling code here:
+        
+         // this.cbmonedasalida.addActionListener((ActionEvent e) -> 
+       //  if(txtmonedasalida.requestFocus(rootPaneCheckingEnabled)){
+      //  cbsegundo();
+       // }
+            
+            
+      //  });
+        
+    }//GEN-LAST:event_cbmonedasalidaMouseClicked
+
+    private void cbmonedaentradaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cbmonedaentradaMouseClicked
+        
+        
+        
+        
+    }//GEN-LAST:event_cbmonedaentradaMouseClicked
+
+    private void rSButtonIconUno1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSButtonIconUno1ActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_rSButtonIconUno1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -253,13 +355,11 @@ public class Convertidor extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Convertidor().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new Convertidor().setVisible(true);
         });
     }
-    
+
     public String getTxtmonedaentrada() {
         return txtmonedaentrada.getText();
     }
@@ -276,17 +376,14 @@ public class Convertidor extends javax.swing.JFrame {
         this.txtmonedasalida.setText(txtmonedasalida);
     }
 
-    public  int getCbmonedaentrada() {
+    public int getCbmonedaentrada() {
         return cbmonedaentrada.getSelectedIndex();
     }
 
-    public  int getCbmonedasalida() {
+    public int getCbmonedasalida() {
         return cbmonedasalida.getSelectedIndex();
     }
-    
-    
-    
-    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private rojerusan.RSComboBox cbmonedaentrada;
@@ -294,13 +391,9 @@ public class Convertidor extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private RSMaterialComponent.RSButtonIconUno rSButtonIconUno1;
     private RSMaterialComponent.RSTextFieldMaterialIcon txtmonedaentrada;
     private RSMaterialComponent.RSTextFieldMaterialIcon txtmonedasalida;
     // End of variables declaration//GEN-END:variables
-
-
-
-
-
 
 }
