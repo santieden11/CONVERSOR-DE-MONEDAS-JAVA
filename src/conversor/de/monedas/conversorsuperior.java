@@ -35,9 +35,20 @@ public class conversorsuperior {
     public String conversorPENaTODOS(String entrada, int cbsalida) {
 
         txtconvertido = Double.parseDouble(entrada);
+        
+        
+        switch(cbsalida){
+            case 1 -> MONEDA = String.valueOf(Math.round((txtconvertido * 1)))+" soles";
+            case 2 -> MONEDA = String.valueOf(Math.round((txtconvertido * 0.26404034536477173712143215483326) * 10000.0) / 10000.0)+" dolares";
+            case 3 -> MONEDA = String.valueOf(Math.round((txtconvertido * 0.24841017488076311605723370429253) * 10000.0) / 10000.0)+" euros";
+            case 4 -> MONEDA = String.valueOf(Math.round((txtconvertido * 0.21938003202948467630476274049536) * 10000.0) / 10000.0)+" libras";
+            case 5 -> MONEDA = String.valueOf(Math.round((txtconvertido * 35.842293906810035842293906810036) * 10000.0) / 10000.0)+" yeanes";
+            case 6 -> MONEDA = String.valueOf(Math.round((txtconvertido * 342.50317072310296912573668150733) * 10000.0) / 10000.0)+" won";
+        
+        }
 
         //de sol peruano a sol peruano
-        if (cbsalida == 1) {
+       /* if (cbsalida == 1) {
             MONEDA = String.valueOf(Math.round((txtconvertido * 1)))+" soles";
 
         }
@@ -66,7 +77,7 @@ public class conversorsuperior {
             MONEDA = String.valueOf(Math.round((txtconvertido * 342.50317072310296912573668150733) * 10000.0) / 10000.0)+" won";
         //    c.setTxtmonedasalida(String.valueOf(MONEDA));
           //  System.out.println("moneda es:6 " + MONEDA);
-        }
+        }*/
 
         return MONEDA;
 
@@ -76,10 +87,18 @@ public class conversorsuperior {
 
         txtconvertido = Double.parseDouble(entrada);
 
-      
+         switch(cbsalida){
+            case 1 -> MONEDA = String.valueOf(Math.round((txtconvertido * 3.7873)* 10000.0)/ 10000.0)+" soles";
+            case 2 -> MONEDA =  String.valueOf(Math.round((txtconvertido * 1) * 10000.0) / 10000.0)+" dolares";
+            case 3 ->MONEDA =  String.valueOf(Math.round((txtconvertido *  0.947927) * 10000.0) / 10000.0)+" auros";
+            case 4 -> MONEDA =  String.valueOf(Math.round((txtconvertido * 0.83068241806667804701579418015591) * 10000.0) / 10000.0)+" esterlinas";
+            case 5 -> MONEDA =  String.valueOf(Math.round((txtconvertido * 135.92268000000000000000000000005) * 10000.0) / 10000.0)+"yeanes";
+            case 6 ->MONEDA =  String.valueOf(Math.round((txtconvertido * 1295.7643058631430066777602231949 ) * 10000.0) / 10000.0)+" wons";
+        
+        }
 
             //de dolar a sol peruano
-            if (cbsalida== 1) {
+         /*   if (cbsalida== 1) {
                 MONEDA = String.valueOf(Math.round((txtconvertido * 3.7873)* 10000.0)/ 10000.0)+" soles";
                
             }
@@ -108,7 +127,7 @@ public class conversorsuperior {
             if (cbsalida== 6) {
                 MONEDA =  String.valueOf(Math.round((txtconvertido * 1295.7643058631430066777602231949 ) * 10000.0) / 10000.0);
                 
-            }
+            }*/
 
      return MONEDA;
 
