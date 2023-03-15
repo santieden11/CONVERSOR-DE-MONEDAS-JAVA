@@ -100,13 +100,16 @@ public class menu extends javax.swing.JFrame {
 
     private void rSButtonIconUno3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSButtonIconUno3ActionPerformed
         // TODO add your handling code here:
-        Conversordemonedas c= new Conversordemonedas();
-        c.setVisible(true);
+        Conversordemonedas cm= new Conversordemonedas();
+        cm.setVisible(true);
         
     }//GEN-LAST:event_rSButtonIconUno3ActionPerformed
 
     private void rSButtonIconUno2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSButtonIconUno2ActionPerformed
         // TODO add your handling code here:
+        
+         Conversordetemperatura ct= new Conversordetemperatura();
+        ct.setVisible(true);
     }//GEN-LAST:event_rSButtonIconUno2ActionPerformed
 
     /**

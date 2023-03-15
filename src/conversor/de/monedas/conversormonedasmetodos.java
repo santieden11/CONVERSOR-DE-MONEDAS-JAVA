@@ -17,7 +17,7 @@ public class conversormonedasmetodos {
 
     private String MONEDA;
 
-    Conversordemonedas c = new Conversordemonedas();
+    Conversordetemperatura c = new Conversordetemperatura();
 
     public void conversortxtentrada() {
         //convesorPENaTODOS();
