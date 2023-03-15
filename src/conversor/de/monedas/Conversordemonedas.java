@@ -8,7 +8,7 @@ import RSMaterialComponent.RSTextFieldMaterialIcon;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-//import static conversor.de.monedas.Convertidor.getCbmonedaentrada;
+//import static conversor.de.monedas.Conversordemonedas.getCbmonedaentrada;
 import java.text.DecimalFormat;
 import javax.swing.JOptionPane;
 import rojerusan.RSComboBox;
@@ -17,12 +17,12 @@ import rojerusan.RSComboBox;
  *
  * @author santiago
  */
-public class Convertidor extends javax.swing.JFrame {
+public class Conversordemonedas extends javax.swing.JFrame {
 
     /**
      * Creates new form Convertidor
      */
-    public Convertidor() {
+    public Conversordemonedas() {
         initComponents();
         this.setLocationRelativeTo(null);
 
@@ -57,7 +57,7 @@ public class Convertidor extends javax.swing.JFrame {
 
     private void cbprimero() {
 
-        conversorsuperior cs = new conversorsuperior();
+        conversormonedasmetodos cs = new conversormonedasmetodos();
 
         if (esDecimal(this.getTxtmonedaentrada())) {
 
@@ -92,7 +92,7 @@ public class Convertidor extends javax.swing.JFrame {
 
     private void cbsegundo() {
 
-        conversorsuperior cs = new conversorsuperior();
+        conversormonedasmetodos cs = new conversormonedasmetodos();
 
         if (esDecimal(this.getTxtmonedasalida())) {
 
@@ -145,7 +145,7 @@ public class Convertidor extends javax.swing.JFrame {
         cbmonedasalida = new rojerusan.RSComboBox();
         txtmonedasalida = new RSMaterialComponent.RSTextFieldMaterialIcon();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -166,9 +166,9 @@ public class Convertidor extends javax.swing.JFrame {
                 rSButtonIconUno1ActionPerformed(evt);
             }
         });
-        jPanel2.add(rSButtonIconUno1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, 50, 50));
+        jPanel2.add(rSButtonIconUno1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 50, 50));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 50));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 50));
 
         cbmonedaentrada.setBackground(new java.awt.Color(255, 204, 51));
         cbmonedaentrada.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "ELIJA MONEDA", "Sol Peruano PEN", "Dolar USD", "Euro EUR", "Libra Esterlina GBP", "Yen Japones  JPY", "Won Sul-Coreano KRW" }));
@@ -265,9 +265,7 @@ public class Convertidor extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -323,12 +321,9 @@ public class Convertidor extends javax.swing.JFrame {
                 "AVISO", JOptionPane.YES_NO_OPTION,
                 JOptionPane.INFORMATION_MESSAGE);
         switch (resp) {
-            case 0:
-                System.exit(0);
-                break;
-            case 1:
-
-                break;
+            case 0 -> this.dispose();
+            case 1 -> {
+            }
 
         }
 
@@ -438,19 +433,22 @@ public class Convertidor extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Convertidor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Conversordemonedas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Convertidor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Conversordemonedas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Convertidor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Conversordemonedas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Convertidor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Conversordemonedas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new Convertidor().setVisible(true);
+            new Conversordemonedas().setVisible(true);
         });
     }
 
