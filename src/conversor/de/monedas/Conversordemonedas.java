@@ -24,7 +24,12 @@ public class Conversordemonedas extends javax.swing.JFrame {
      */
     public Conversordemonedas() {
         initComponents();
-        this.setLocationRelativeTo(null);
+                 rsutilities.RSUtilities.setCentrarVentana(this);
+             rsutilities.RSUtilities.setMoverVentana(this);
+             rsutilities.RSUtilities.setOpaqueVentana(this,false);
+        
+         this.setLocationRelativeTo(null);
+             this.setResizable(false);
 
     }
 

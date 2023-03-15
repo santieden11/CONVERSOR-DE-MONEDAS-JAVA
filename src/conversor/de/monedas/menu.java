@@ -17,7 +17,14 @@ public class menu extends javax.swing.JFrame {
      */
     public menu() {
         initComponents();
-          this.setLocationRelativeTo(null);
+           rsutilities.RSUtilities.setCentrarVentana(this);
+             rsutilities.RSUtilities.setMoverVentana(this);
+             rsutilities.RSUtilities.setOpaqueVentana(this,false);
+        
+         this.setLocationRelativeTo(null);
+             this.setResizable(false);
+        
+          //this.setLocationRelativeTo(null);
     }
 
     /**
@@ -62,7 +69,9 @@ public class menu extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, -1));
 
-        rSButtonIconUno2.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.STRIKETHROUGH_S);
+        rSButtonIconUno2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconotemperatura.png"))); // NOI18N
+        rSButtonIconUno2.setToolTipText("TEMPERATURA");
+        rSButtonIconUno2.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.TIMER);
         rSButtonIconUno2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rSButtonIconUno2ActionPerformed(evt);
@@ -70,7 +79,9 @@ public class menu extends javax.swing.JFrame {
         });
         jPanel1.add(rSButtonIconUno2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 120, 120, 120));
 
+        rSButtonIconUno3.setToolTipText("MONEDAS");
         rSButtonIconUno3.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.MONETIZATION_ON);
+        rSButtonIconUno3.setName("hjhhgdfg"); // NOI18N
         rSButtonIconUno3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rSButtonIconUno3ActionPerformed(evt);
@@ -86,7 +97,7 @@ public class menu extends javax.swing.JFrame {
     private void rSButtonIconUno1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSButtonIconUno1ActionPerformed
         // TODO add your handling code here:
 
-        int resp = JOptionPane.showConfirmDialog(null, "DESEAS CERRAR EL CONVERSOR DE MONEDAS",
+        int resp = JOptionPane.showConfirmDialog(null, "DESEAS CERRAR EL SISTEMA",
             "AVISO", JOptionPane.YES_NO_OPTION,
             JOptionPane.INFORMATION_MESSAGE);
         switch (resp) {
@@ -107,8 +118,8 @@ public class menu extends javax.swing.JFrame {
 
     private void rSButtonIconUno2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSButtonIconUno2ActionPerformed
         // TODO add your handling code here:
-        
-         Conversordetemperatura ct= new Conversordetemperatura();
+
+        Conversordetemperatura ct= new Conversordetemperatura();
         ct.setVisible(true);
     }//GEN-LAST:event_rSButtonIconUno2ActionPerformed
 

@@ -24,7 +24,12 @@ public class Conversordetemperatura extends javax.swing.JFrame {
      */
     public Conversordetemperatura() {
         initComponents();
-        this.setLocationRelativeTo(null);
+                  rsutilities.RSUtilities.setCentrarVentana(this);
+             rsutilities.RSUtilities.setMoverVentana(this);
+             rsutilities.RSUtilities.setOpaqueVentana(this,false);
+        
+         this.setLocationRelativeTo(null);
+             this.setResizable(false);
 
     }
 
@@ -42,7 +47,7 @@ public class Conversordetemperatura extends javax.swing.JFrame {
         if (cb1 != 0 && cb2 != 0) {
             return true;
         } else {
-            JOptionPane.showMessageDialog(rootPane, "!selecione la moneda a convertir");
+            JOptionPane.showMessageDialog(rootPane, "!selecione la unidad a convertir");
            this.setTxtunidadentrada("1");
            this.setTxtunidadsalida("1");
              this.txtunidadentrada.setForeground(Color.ORANGE);
@@ -152,8 +157,8 @@ public class Conversordetemperatura extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("CONVERTIDOR DE MONEDAS");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 310, 30));
+        jLabel1.setText("CONVERTIDOR DE TEMPERATURA");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 370, 30));
 
         rSButtonIconUno1.setBackground(new java.awt.Color(255, 204, 51));
         rSButtonIconUno1.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.CLOSE);
