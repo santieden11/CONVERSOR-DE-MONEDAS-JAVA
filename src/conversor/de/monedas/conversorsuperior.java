@@ -38,32 +38,32 @@ public class conversorsuperior {
 
         //de sol peruano a sol peruano
         if (cbsalida == 1) {
-            MONEDA = String.valueOf(Math.round((txtconvertido * 1)));
+            MONEDA = String.valueOf(Math.round((txtconvertido * 1)))+" soles";
 
         }
         //sol peruano a dolares
         if (cbsalida == 2) {
-            MONEDA = String.valueOf(Math.round((txtconvertido * 0.26404034536477173712143215483326) * 10000.0) / 10000.0);
+            MONEDA = String.valueOf(Math.round((txtconvertido * 0.26404034536477173712143215483326) * 10000.0) / 10000.0)+" dolares";
 
         }
         //sol peruano a auros
 
         if (cbsalida == 3) {
-            MONEDA = String.valueOf(Math.round((txtconvertido * 0.24841017488076311605723370429253) * 10000.0) / 10000.0);
+            MONEDA = String.valueOf(Math.round((txtconvertido * 0.24841017488076311605723370429253) * 10000.0) / 10000.0)+" euros";
         }
         //sol peruano a libras esterlinas
         if (cbsalida == 4) {
-            MONEDA = String.valueOf(Math.round((txtconvertido * 0.21938003202948467630476274049536) * 10000.0) / 10000.0);
+            MONEDA = String.valueOf(Math.round((txtconvertido * 0.21938003202948467630476274049536) * 10000.0) / 10000.0)+" libras";
         }
         //sol peruano a yean japoneses
         if (cbsalida == 5) {
-            MONEDA = String.valueOf(Math.round((txtconvertido * 35.842293906810035842293906810036) * 10000.0) / 10000.0);
+            MONEDA = String.valueOf(Math.round((txtconvertido * 35.842293906810035842293906810036) * 10000.0) / 10000.0)+" yeanes";
           //  c.setTxtmonedasalida(String.valueOf(MONEDA));
           //  System.out.println("moneda es:5 " + MONEDA);
         }
         //sol peruano a won coreanos
         if (cbsalida == 6) {
-            MONEDA = String.valueOf(Math.round((txtconvertido * 342.50317072310296912573668150733) * 10000.0) / 10000.0);
+            MONEDA = String.valueOf(Math.round((txtconvertido * 342.50317072310296912573668150733) * 10000.0) / 10000.0)+" won";
         //    c.setTxtmonedasalida(String.valueOf(MONEDA));
           //  System.out.println("moneda es:6 " + MONEDA);
         }
@@ -80,27 +80,27 @@ public class conversorsuperior {
 
             //de dolar a sol peruano
             if (cbsalida== 1) {
-                MONEDA = String.valueOf(Math.round((txtconvertido * 3.7873)* 10000.0)/ 10000.0);
+                MONEDA = String.valueOf(Math.round((txtconvertido * 3.7873)* 10000.0)/ 10000.0)+" soles";
                
             }
             //dolar a dolar
             if (cbsalida == 2) {
-                MONEDA =  String.valueOf(Math.round((txtconvertido * 1) * 10000.0) / 10000.0);
+                MONEDA =  String.valueOf(Math.round((txtconvertido * 1) * 10000.0) / 10000.0)+" dolares";
                 
             }
                   //dolar a auro
             if (cbsalida== 3) {
-                MONEDA =  String.valueOf(Math.round((txtconvertido *  0.947927) * 10000.0) / 10000.0);
+                MONEDA =  String.valueOf(Math.round((txtconvertido *  0.947927) * 10000.0) / 10000.0)+" auros";
                
             }
             //dolar a libras esterlinas
             if (cbsalida == 4) {
-                MONEDA =  String.valueOf(Math.round((txtconvertido * 0.83068241806667804701579418015591) * 10000.0) / 10000.0);
+                MONEDA =  String.valueOf(Math.round((txtconvertido * 0.83068241806667804701579418015591) * 10000.0) / 10000.0)+" esterlinas";
                
             }
             //dolar a yean japones
             if (cbsalida == 5) {
-                MONEDA =  String.valueOf(Math.round((txtconvertido * 135.92268000000000000000000000005) * 10000.0) / 10000.0);
+                MONEDA =  String.valueOf(Math.round((txtconvertido * 135.92268000000000000000000000005) * 10000.0) / 10000.0)+"yeanes";
                 
             }
             
