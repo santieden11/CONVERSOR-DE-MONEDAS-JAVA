@@ -50,8 +50,8 @@ public class Conversordetemperatura extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "!selecione la unidad a convertir");
            this.setTxtunidadentrada("1");
            this.setTxtunidadsalida("1");
-             this.txtunidadentrada.setForeground(Color.ORANGE);
-             this.txtunidadsalida.setForeground(Color.ORANGE);
+             this.txtunidadentrada.setForeground(Color.BLUE);
+             this.txtunidadsalida.setForeground(Color.BLUE);
             return false;
         }
 
@@ -152,7 +152,7 @@ public class Conversordetemperatura extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(255, 204, 51));
+        jPanel2.setBackground(new java.awt.Color(0, 112, 192));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
@@ -160,7 +160,6 @@ public class Conversordetemperatura extends javax.swing.JFrame {
         jLabel1.setText("CONVERTIDOR DE TEMPERATURA");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 370, 30));
 
-        rSButtonIconUno1.setBackground(new java.awt.Color(255, 204, 51));
         rSButtonIconUno1.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.CLOSE);
         rSButtonIconUno1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,12 +170,8 @@ public class Conversordetemperatura extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 50));
 
-        cbunidadentrada.setBackground(new java.awt.Color(255, 204, 51));
+        cbunidadentrada.setBackground(new java.awt.Color(0, 112, 192));
         cbunidadentrada.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "ELIJA UNIDAD", "Centigrados °C", "Fahrenheit °F", "Kelvin K", "Rankine °R", "Réaumur °Re" }));
-        cbunidadentrada.setColorArrow(new java.awt.Color(255, 204, 51));
-        cbunidadentrada.setColorBorde(new java.awt.Color(255, 255, 0));
-        cbunidadentrada.setColorFondo(new java.awt.Color(255, 204, 51));
-        cbunidadentrada.setColorSeleccion(new java.awt.Color(255, 204, 51));
         cbunidadentrada.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 cbunidadentradaItemStateChanged(evt);
@@ -195,10 +190,7 @@ public class Conversordetemperatura extends javax.swing.JFrame {
         });
         jPanel1.add(cbunidadentrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, -1, 40));
 
-        txtunidadentrada.setForeground(new java.awt.Color(255, 204, 51));
         txtunidadentrada.setText("1");
-        txtunidadentrada.setColorIcon(new java.awt.Color(255, 204, 51));
-        txtunidadentrada.setColorMaterial(new java.awt.Color(255, 204, 51));
         txtunidadentrada.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.MONETIZATION_ON);
         txtunidadentrada.setPhColor(new java.awt.Color(0, 0, 0));
         txtunidadentrada.setPlaceholder("Escribir aqui");
@@ -220,12 +212,8 @@ public class Conversordetemperatura extends javax.swing.JFrame {
         });
         jPanel1.add(txtunidadentrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, 190, -1));
 
-        cbunidadsalida.setBackground(new java.awt.Color(255, 204, 51));
+        cbunidadsalida.setBackground(new java.awt.Color(0, 112, 192));
         cbunidadsalida.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "ELIJA UNIDAD", "Centigrados °C", "Fahrenheit °F", "Kelvin K", "Rankine °R", "Réaumur °Re" }));
-        cbunidadsalida.setColorArrow(new java.awt.Color(255, 204, 51));
-        cbunidadsalida.setColorBorde(new java.awt.Color(255, 255, 0));
-        cbunidadsalida.setColorFondo(new java.awt.Color(255, 204, 51));
-        cbunidadsalida.setColorSeleccion(new java.awt.Color(255, 204, 51));
         cbunidadsalida.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 cbunidadsalidaItemStateChanged(evt);
@@ -241,11 +229,8 @@ public class Conversordetemperatura extends javax.swing.JFrame {
         });
         jPanel1.add(cbunidadsalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, 40));
 
-        txtunidadsalida.setForeground(new java.awt.Color(255, 204, 51));
         txtunidadsalida.setText("1");
         txtunidadsalida.setToolTipText("");
-        txtunidadsalida.setColorIcon(new java.awt.Color(255, 204, 51));
-        txtunidadsalida.setColorMaterial(new java.awt.Color(255, 204, 51));
         txtunidadsalida.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.MONETIZATION_ON);
         txtunidadsalida.setPhColor(new java.awt.Color(0, 0, 0));
         txtunidadsalida.setPlaceholder("Escribir aqui");
@@ -336,7 +321,7 @@ public class Conversordetemperatura extends javax.swing.JFrame {
         } else {
             this.txtunidadentrada.setText("1");
             this.txtunidadentrada.setForeground(Color.red);
-            this.txtunidadsalida.setForeground(Color.ORANGE);
+            this.txtunidadsalida.setForeground(Color.BLUE);
             // this.txtmonedaentrada.setText("1");
             cbprimero();
         }
@@ -353,7 +338,7 @@ public class Conversordetemperatura extends javax.swing.JFrame {
         } else {
             this.txtunidadsalida.setText("1");
             this.txtunidadsalida.setForeground(Color.red);
-            this.txtunidadentrada.setForeground(Color.ORANGE);
+            this.txtunidadentrada.setForeground(Color.BLUE);
             // this.txtmonedaentrada.setText("1");
             cbsegundo();
         }

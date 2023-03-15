@@ -17,7 +17,7 @@ public class menu extends javax.swing.JFrame {
      */
     public menu() {
         initComponents();
-           rsutilities.RSUtilities.setCentrarVentana(this);
+          rsutilities.RSUtilities.setCentrarVentana(this);
              rsutilities.RSUtilities.setMoverVentana(this);
              rsutilities.RSUtilities.setOpaqueVentana(this,false);
         
@@ -69,7 +69,6 @@ public class menu extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, -1));
 
-        rSButtonIconUno2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconotemperatura.png"))); // NOI18N
         rSButtonIconUno2.setToolTipText("TEMPERATURA");
         rSButtonIconUno2.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.TIMER);
         rSButtonIconUno2.addActionListener(new java.awt.event.ActionListener() {
