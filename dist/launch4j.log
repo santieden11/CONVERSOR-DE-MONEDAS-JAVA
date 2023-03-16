@@ -1,0 +1,134 @@
+
+
+Version:	3.50
+CmdLine:	D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\Conversor.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+JRE paths:	JRE\jdk-18
+Check launcher:	D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\JRE\jdk-18\bin\javaw.exe (OK)
+Version string: 1.018.000 / 64-Bit (OK)
+Launcher:	D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\JRE\jdk-18\bin\javaw.exe
+Launcher args:	-jar "D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\Conversor.exe"
+Args length:	96/32768 chars
+Exit code:	0
+
+
+Version:	3.50
+CmdLine:	D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\Conversor1.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+JRE paths:	JRE\jdk-18\
+Check launcher:	D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\JRE\jdk-18\bin\javaw.exe (OK)
+Cannot create process "D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\JRE\jdk-18\bin\javaw.exe" -version
+Cannot run java(w) -version
+Error msg:	This application requires a Java Runtime Environment.
+Error:		La operación solicitada requiere elevación.
+
+
+
+Version:	3.50
+CmdLine:	D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\Conversor1.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+JRE paths:	JRE\jdk-18\
+Check launcher:	D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\JRE\jdk-18\bin\javaw.exe (OK)
+Cannot create process "D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\JRE\jdk-18\bin\javaw.exe" -version
+Cannot run java(w) -version
+Error msg:	This application requires a Java Runtime Environment.
+Error:		La operación solicitada requiere elevación.
+
+
+
+Version:	3.50
+CmdLine:	D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\Conversor2.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+JRE paths:	\JRE\jdk-18\
+Check launcher:	\JRE\jdk-18\bin\javaw.exe (not found)
+Error msg:	This application requires a Java Runtime Environment.
+
+
+Version:	3.50
+CmdLine:	D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\Conversor2.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+JRE paths:	\JRE\jdk-18\
+Check launcher:	\JRE\jdk-18\bin\javaw.exe (not found)
+Error msg:	This application requires a Java Runtime Environment.
+
+
+Version:	3.50
+CmdLine:	D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\Conversor3.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+JRE paths:	JRE\jdk-18\bin\javaw.exe
+Check launcher:	D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\JRE\jdk-18\bin\javaw.exe\bin\javaw.exe (not found)
+Error msg:	This application requires a Java Runtime Environment.
+
+
+Version:	3.50
+CmdLine:	D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\Conversor3.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+JRE paths:	JRE\jdk-18.0.2.1
+Check launcher:	D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\JRE\jdk-18.0.2.1\bin\javaw.exe (OK)
+Warning:	formatJavaVersion() too many parts added.
+Version string: 1.018.000_002 / 64-Bit (OK)
+Launcher:	D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\JRE\jdk-18.0.2.1\bin\javaw.exe
+Launcher args:	-jar "D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\Conversor3.exe"
+Args length:	97/32768 chars
+Exit code:	0
+
+
+Version:	3.50
+CmdLine:	D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\Conversor.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+JRE paths:	JRE\jdk-18.0.2.1
+Check launcher:	D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\JRE\jdk-18.0.2.1\bin\javaw.exe (OK)
+Warning:	formatJavaVersion() too many parts added.
+Version string: 1.018.000_002 / 64-Bit (OK)
+Launcher:	D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\JRE\jdk-18.0.2.1\bin\javaw.exe
+Launcher args:	-jar "D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\Conversor.exe"
+Args length:	96/32768 chars
+Exit code:	0

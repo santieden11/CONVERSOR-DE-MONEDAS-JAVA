@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\CONVERSOR_DE_MONEDAS.jar</jar>
+  <outfile>D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\Conversor.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl></downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest></manifest>
+  <icon>D:\Logica de programacion\APRENDIENDO JAVA\CHGUEN\CONVERSOR DE MONEDAS\dist\conversor.ico</icon>
+  <jre>
+    <path>JRE/jdk-18.0.2.1</path>
+    <requiresJdk>false</requiresJdk>
+    <requires64Bit>false</requires64Bit>
+    <minVersion></minVersion>
+    <maxVersion></maxVersion>
+  </jre>
+</launch4jConfig>
