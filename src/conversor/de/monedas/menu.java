@@ -5,28 +5,64 @@
 package conversor.de.monedas;
 
 import javax.swing.JOptionPane;
+//import org.softsmithy.lib.awt.AWTUtilities;
 
 /**
  *
  * @author santiago
  */
-public class menu extends javax.swing.JFrame {
-
+public final class menu extends javax.swing.JFrame {
+    splash inicio;
     /**
      * Creates new form menu
      */
     public menu() {
+        
+        this.setUndecorated(true);
         initComponents();
+       
+       // AWTUtilities.setWindowOpaque(this,false);
           rsutilities.RSUtilities.setCentrarVentana(this);
              rsutilities.RSUtilities.setMoverVentana(this);
              rsutilities.RSUtilities.setOpaqueVentana(this,false);
+          //   rsutilities.RSUtilities.s(this,false);
         
          this.setLocationRelativeTo(null);
              this.setResizable(false);
         
+             
           //this.setLocationRelativeTo(null);
     }
+     public menu(splash inicio) {
+        this.inicio = inicio;
+        setProgress(0, "Cargando Componentes del Sistema");
+        initComponents();
+          rsutilities.RSUtilities.setCentrarVentana(this);
+        rsutilities.RSUtilities.setMoverVentana(this);
+        rsutilities.RSUtilities.setOpaqueVentana(this, false);
+       // this.setSize(410, 500);
+        this.setResizable(false);
+        this.setLocationRelativeTo(null);
+        //this.setIconImage(new ImageIcon(getClass().getResource("/img/icon.png")).getImage());
+     //  this.jLabel2.setText("ACCESO - SISTEMA CORPORACIóN SERVIPAC ");
+        setProgress(20, "Conectandose a la Base de Datos...");
+        setProgress(40, "Cargando Modulos..");
+        setProgress(60, "Carga de Modulos Terminada");
+        setProgress(80, "Cargando Interfaces..");
+        setProgress(90, "Interfaces Cargadas");
+        setProgress(100, "Bienvenido al Sistema");
+        this.setLocationRelativeTo(null);
+    }
+   void setProgress(int percent, String information) {
+        inicio.getJLabel().setText(information);
+        inicio.getJProgressBar().setValue(percent);
 
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException ex) {
+            JOptionPane.showMessageDialog(this, "No se pudo ejecutar la presentación");
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -56,8 +92,8 @@ public class menu extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("CONVERTIDOR ");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 180, 30));
+        jLabel1.setText("CONVERSOR");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 180, 30));
 
         rSButtonIconUno1.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.CLOSE);
         rSButtonIconUno1.addActionListener(new java.awt.event.ActionListener() {
@@ -138,22 +174,16 @@ public class menu extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        
+        //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new menu().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new menu().setVisible(true);
         });
     }
 
