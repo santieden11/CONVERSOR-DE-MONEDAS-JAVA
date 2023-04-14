@@ -74,15 +74,15 @@ public class Conversordemonedas extends javax.swing.JFrame {
                     case 1 ->
                         this.setTxtmonedasalida(cs.conversorPENaTODOS(this.getTxtmonedaentrada(), this.getCbmonedasalida()));
                     case 2 ->
-                        this.setTxtmonedasalida(cs.conversorPENaTODOS(this.getTxtmonedaentrada(), this.getCbmonedasalida()));
+                        this.setTxtmonedasalida(cs.conversorUSDaTODOS   (this.getTxtmonedaentrada(), this.getCbmonedasalida()));
                     case 3 ->
-                        this.setTxtmonedasalida(cs.conversorPENaTODOS(this.getTxtmonedaentrada(), this.getCbmonedasalida()));
+                        this.setTxtmonedasalida(cs.conversorEURaTODOS(this.getTxtmonedaentrada(), this.getCbmonedasalida()));
                     case 4 ->
-                        this.setTxtmonedasalida(cs.conversorPENaTODOS(this.getTxtmonedaentrada(), this.getCbmonedasalida()));
+                        this.setTxtmonedasalida(cs.conversorGBPaTODOS(this.getTxtmonedaentrada(), this.getCbmonedasalida()));
                     case 5 ->
-                        this.setTxtmonedasalida(cs.conversorPENaTODOS(this.getTxtmonedaentrada(), this.getCbmonedasalida()));
+                        this.setTxtmonedasalida(cs.conversorJPYaTODOS(this.getTxtmonedaentrada(), this.getCbmonedasalida()));
                     case 6 ->
-                        this.setTxtmonedasalida(cs.conversorPENaTODOS(this.getTxtmonedaentrada(), this.getCbmonedasalida()));
+                        this.setTxtmonedasalida(cs.conversorKRWaTODOS(this.getTxtmonedaentrada(), this.getCbmonedasalida()));
                 }
 
             }
@@ -108,15 +108,15 @@ public class Conversordemonedas extends javax.swing.JFrame {
                     case 1 ->
                        this.setTxtmonedaentrada(cs.conversorPENaTODOS(this.getTxtmonedasalida(), this.getCbmonedaentrada()));
                     case 2 ->
-                        this.setTxtmonedaentrada(cs.conversorPENaTODOS(this.getTxtmonedasalida(), this.getCbmonedaentrada()));
+                        this.setTxtmonedaentrada(cs.conversorUSDaTODOS(this.getTxtmonedasalida(), this.getCbmonedaentrada()));
                     case 3 ->
-                        this.setTxtmonedaentrada(cs.conversorPENaTODOS(this.getTxtmonedasalida(), this.getCbmonedaentrada()));
+                        this.setTxtmonedaentrada(cs.conversorEURaTODOS(this.getTxtmonedasalida(), this.getCbmonedaentrada()));
                     case 4 ->
-                        this.setTxtmonedaentrada(cs.conversorPENaTODOS(this.getTxtmonedasalida(), this.getCbmonedaentrada()));
+                        this.setTxtmonedaentrada(cs.conversorGBPaTODOS(this.getTxtmonedasalida(), this.getCbmonedaentrada()));
                     case 5 ->
-                        this.setTxtmonedaentrada(cs.conversorPENaTODOS(this.getTxtmonedasalida(), this.getCbmonedaentrada()));
+                        this.setTxtmonedaentrada(cs.conversorJPYaTODOS(this.getTxtmonedasalida(), this.getCbmonedaentrada()));
                     case 6 ->
-                        this.setTxtmonedaentrada(cs.conversorPENaTODOS(this.getTxtmonedasalida(), this.getCbmonedaentrada()));
+                        this.setTxtmonedaentrada(cs.conversorKRWaTODOS(this.getTxtmonedasalida(), this.getCbmonedaentrada()));
                 }
                 
                 
