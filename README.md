@@ -15,8 +15,8 @@ Esta app es una solución al challenge "Convertidor de Moneda" propuesto por Alu
 # Pasos de instalación
 ### Ejecutable el archivo conversor.exe
 1. Clonar el repositorio
-2. Descargue el complemento JRE de aqui [google driver](https://drive.google.com/file/d/1JrFKpatFLTpx_p3mp1_ap99ZqSUzqlAA/view?usp=share_link)
-3. Extraiga el complemento descargado,lleva como nombre jdk-18.0.2.1.rar en la carpeta   del proyecto, que se encuentra en la siguiente direccion: CONVERSOR-DE-MONEDAS-JAVA-main\dist\JRE                              
+2. Descargue el complemento JRE de aqui [google driver](https://drive.google.com/file/d/1W5Qbhc4qy7MhEyEHzB1YpEKJkEEEqF9n/view?usp=share_link)
+3. Extraiga el complemento descargado,lleva como nombre jdk-18.0.2.1.zip en la carpeta   del proyecto, que se encuentra en la siguiente direccion: CONVERSOR-DE-MONEDAS-JAVA-main\dist\JRE                              
 5. Ejecutar la aplicacion Converosr.exe que se encuentra en en la carpeta del proyecto  [ dist/](https://github.com/santieden11/CONVERSOR-DE-MONEDAS-JAVA/blob/f26c4ec824d0c0814276f00cdde639d84d788091/dist) 
 6. Disfrute de la aplicación
 ### Apache NetBeans IDE 16
